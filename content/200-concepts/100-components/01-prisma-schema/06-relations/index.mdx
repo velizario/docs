@@ -526,7 +526,7 @@ model Post {
   author     User    @relation("WrittenPosts", fields: [authorId], references: [id])
   authorId   Int
   pinnedBy   User?   @relation(name: "PinnedPost", fields: [pinnedById], references: [id])
-  pinnedById Int?
+  pinnedById Int?    @unique
 }
 ```
 
